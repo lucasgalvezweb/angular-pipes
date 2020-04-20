@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nombre:string = 'Capitán America';
+  nombre2:string = 'lUcAs GAlveZ ChAmorRo';
 
   arreglo = [1,2,3,4,5,6,7,8,9,10];
   PI:number = Math.PI;
@@ -14,7 +15,11 @@ export class AppComponent {
   salario: number = 1250.5;
   fecha: Date = new Date();
 
+  contrasena:string = 'k98d38f9fjs19dj';
+  activar: boolean = false;
+
   idioma: string = 'fr';
+  videoURL:string = 'https://www.youtube.com/embed/NXaKJDtjsHY';
 
   valorPromesa = new Promise<string>((resolve) => {
     setTimeout(() => {

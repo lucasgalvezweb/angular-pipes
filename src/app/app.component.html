@@ -18,6 +18,11 @@
                     <td>{{ nombre | uppercase }}</td>
                 </tr>
                 <tr>
+                    <td>{{ nombre2 }}</td>
+                    <td> capitalizado </td>
+                    <td>{{ nombre2 | capitalizado }}</td>
+                </tr>
+                <tr>
                     <td>{{ nombre }}</td>
                     <td> lowercase </td>
                     <td>{{ nombre | lowercase }}</td>
@@ -92,6 +97,15 @@
                     </td>
                     <td>{{ fecha | date:'MMM - dd - yyy':'':idioma }}</td>
                 </tr>
+                <tr>
+                    <td>{{ contrasena }}</td>
+                    <td>
+                        asterisco
+                        <br>
+                        <button (click)="activar = !activar" class="mr-1 btn btn-outline-primary">Activar/Desactivar</button>
+                    </td>
+                    <td>{{ contrasena | asterisco:activar }}</td>
+                </tr>
             </tbody>
         </table>
 
@@ -109,5 +123,14 @@
                 </pre>
             </div>
         </div>
+    </div>
+</div>
+
+<h3 class="mt-4">DOM Seguro</h3>
+<hr>
+
+<div class="row mb-5">
+    <div class="col">
+        <iframe width="560" height="315" [src]="videoURL | domseguro" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
